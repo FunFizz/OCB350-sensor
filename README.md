@@ -108,7 +108,7 @@ Some References: https://www.circuitstate.com/intocb350l250z
 
 https://www.ttelectronics.com/TTElectronics/media/ProductFiles/Datasheet/opb350.pdf
   
-  delay(500); // Small delay for readability in serial output
+
 ---
 
 ## 📝 Arduino Code
