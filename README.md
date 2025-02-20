@@ -104,6 +104,3 @@ void loop() {
 
 
 
-![Sensor State](20250220_001402.jpg)
-![Sensor State](20250220_001433.jpg)
-![Sensor State](20250220_001457.jpg)
