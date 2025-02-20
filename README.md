@@ -62,6 +62,53 @@ The **sensor outputs two logic signals (A & B)** that define four possible state
 
 ![Sensor State](20250220_001402.jpg)
 
+Calibrating the Sensor 🎯
+
+Calibration ensures the sensor is optimized for the specific environmental and tube conditions.
+
+🔍 How Calibration Works:
+
+· The sensor adjusts the LED drive current until the phototransistor output matches the calibration target.
+
+· This compensates for degradation, ambient light, or contamination in the optical path.
+
+🛠️ Steps for Calibration:
+
+1. Ground the Calibration Pin (Green Wire):
+
+a. Connect the green wire to ground (black wire) for 1-2 seconds.
+
+b. This can be automated by connecting the green wire to a digital output pin (e.g., D7) and using Arduino code.
+
+2. LED Feedback During Calibration:
+
+a. Green LED Blinking: Calibration is in progress.
+
+b. Green LED Steady ON: Calibration successful.
+
+c. Red LED ON: Calibration failed. Check alignment or environmental conditions.
+
+3. Choose Calibration State:
+
+a. Empty Tube: Baseline is no liquid.
+
+b. Clear Liquid: Baseline is clear liquid present.
+
+c. No Tube: Baseline is no tube.
+
+4. Arduino Code for Calibration:
+
+const int CALIBRATE_PIN = 7; // Define calibration pin void setup() { pinMode(CALIBRATE_PIN, OUTPUT); // Start calibration digitalWrite(CALIBRATE_PIN, LOW); delay(2000); // Hold calibration for 2 seconds digitalWrite(CALIBRATE_PIN, HIGH); // End calibration }
+
+
+Progress: We observed the green light for calibration but need to ground touching the wires next and add delay to the code.
+
+
+Some References: https://www.circuitstate.com/intocb350l250z
+
+https://www.ttelectronics.com/TTElectronics/media/ProductFiles/Datasheet/opb350.pdf
+  
+  delay(500); // Small delay for readability in serial output
 ---
 
 ## 📝 Arduino Code
@@ -98,8 +145,8 @@ void loop() {
   } else {
     Serial.println("Unknown State ❓");
   }
-  
-  delay(500); // Small delay for readability in serial output
+
+
 }
 
 
