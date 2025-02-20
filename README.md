@@ -38,6 +38,28 @@ The **sensor outputs two logic signals (A & B)** that define four possible state
 - **Power Supply:** 5V (or 3.3V depending on sensor)
 - **Common Ground (GND)**: Connect sensor GND to Arduino GND
 
+- 🔗 Identifying the JST Wires:
+
+· Red: Vcc (Power supply, 4.75V–5.25V)
+
+· Black: GND (Ground)
+
+· Orange: Logic Out A (Digital)
+
+· Blue: Logic Out B (Digital)
+
+· White: Analog Output
+
+· Green: Calibration Pin
+
+🛠️ Steps to Connect:
+
+1. Connect the Red wire to the Arduino’s 5V pin.
+
+2. Connect the Black wire to the Arduino’s GND pin.
+
+3. Connect the remaining wires (as needed) to the appropriate Arduino pins.
+
 ![Sensor State](20250220_001402.jpg)
 
 ---
