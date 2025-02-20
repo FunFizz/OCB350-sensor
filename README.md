@@ -38,6 +38,8 @@ The **sensor outputs two logic signals (A & B)** that define four possible state
 - **Power Supply:** 5V (or 3.3V depending on sensor)
 - **Common Ground (GND)**: Connect sensor GND to Arduino GND
 
+![Sensor State](20250220_001402.jpg)
+
 ---
 
 ## 📝 Arduino Code
