@@ -1,6 +1,9 @@
 # OCB350-sensor
 The OCB350 sensor is designed for liquid detection in tubes with non-contact operation. The sensor uses an optical phototransistor to detect changes in light caused by the presence or absence of liquid
 
+![Sensor State](20250220_001506.jpg)
+
+
 # 🚀 Sensor State Detection with Arduino
 
 This project demonstrates how to **read and interpret sensor states** using **digital logic outputs (A & B) and an analog signal (A0)**. The **sensor states** are printed to the **Serial Monitor** instead of controlling an LED.
@@ -67,9 +70,16 @@ void loop() {
     Serial.println("Completely Blocked 🟢");
   } else if (logicA == 1 && logicB == 1) {
     Serial.println("Tube Present (No Water) ⚫");
+
   } else {
     Serial.println("Unknown State ❓");
   }
   
   delay(500); // Small delay for readability in serial output
 }
+
+
+
+![Sensor State](20250220_001402.jpg)
+![Sensor State](20250220_001433.jpg)
+![Sensor State](20250220_001457.jpg)
